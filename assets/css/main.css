@@ -262,6 +262,32 @@ h6 {
   left: 0;
 }
 
+@media (orientation: portrait) {
+  #navbar {
+    display: none;
+  }
+}
+
+.mobile-logo{
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(31,41,55, 0.5);
+    background-blend-mode: overlay;
+    backdrop-filter: blur(12px);
+    justify-content: center;
+}
+
+@media (orientation: landscape) {
+  .mobile-logo {
+    display: none;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -372,8 +398,8 @@ h6 {
   @media (max-width: 1100px) {
     background-size: 110%;
   }
-  @media (max-width: 800px) and (max-height: 900px) {
-    background-size: 140%;
+  @media (max-width: 800px) and (max-height: 920px) {
+    background-size: 240%;
   }
 }
 
@@ -384,7 +410,8 @@ h6 {
 }
 
 .hero-copy h4{
-  background: linear-gradient(90deg, rgb(255, 0, 111) 10%,  rgb(0, 128, 255) 100%);
+  font-family: JetBrains Mono;
+  background: linear-gradient(90deg, rgb(255, 0, 111) 5%,  rgb(0, 128, 255) 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -504,7 +531,7 @@ padding: 1.5rem 0;
 }
 
 .carousel {
-  padding: 1.5rem 0;
+    padding: 1.5rem 0;
 
     @media (min-width: 4800px) {
       width: 30%;
@@ -524,10 +551,56 @@ padding: 1.5rem 0;
     @media (max-width: 1100px) {
       width: 40%;
     }
-    @media (max-width: 800px) and (max-height: 900px) {
-      width: 80%;
+    @media (max-width: 800px) and (max-height: 920px) {
+      margin-left: 15%;
+      width: 90%;
     }
   }
+
+  .carousel-item {
+    width: 80%;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  @media (orientation: portrait) {
+    .hero-buttons {
+      justify-content: center;
+    }
+  }  
+  
+  .nav-down{
+    animation: bounce 1s infinite;
+    font-size: 64px;
+    background: linear-gradient(45deg, rgb(255, 0, 111) 15%,  rgb(0, 128, 255) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @media (orientation: landscape) {
+    .nav-down {
+      display: none;
+    }
+  }  
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -607,8 +680,8 @@ position: relative;
   @media (max-width: 1100px) {
     background-size: 80%;
   }
-  @media (max-width: 800px) and (max-height: 900px) {
-    background: none;
+  @media (max-width: 800px) and (max-height: 920px) {
+    background-size: 180%;
   }
 }
 
@@ -631,8 +704,8 @@ position: relative;
   @media (max-width: 1100px) {
     background-size: 80%;
   }
-  @media (max-width: 800px) and (max-height: 900px) {
-    background: none;
+  @media (max-width: 800px) and (max-height: 920px) {
+    background-size: 180%;
   }
 }
 
@@ -839,7 +912,7 @@ position: relative;
   border-radius: 36px;
   padding: 32px;
   backdrop-filter: blur(10px);
-  height: 35vh;
+  height: 36vh;
 }
 
 .card {
@@ -881,7 +954,7 @@ position: relative;
 }
 
 .card-title {
-  /* color: #f5fafd; */
+  font-family: JetBrains Mono;
   font-weight: 800;
   background: linear-gradient(90deg, rgb(255, 0, 111) 10%,  rgb(0, 128, 255) 100%);
   -webkit-background-clip: text;
@@ -1116,16 +1189,4 @@ opacity: 0.7;
 
 #footer .copyright {
   margin: 0 0 5px 0;
-}
-
-.carousel-item {
-  width: 80%;
-  /* height: 100vh; */
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  transition: transform 0.5s ease-in-out;
 }

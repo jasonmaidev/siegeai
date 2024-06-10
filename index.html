@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,9 +39,8 @@
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
-  <!-- ======= Header ======= -->
-  <nav id="navbar" class="navbar nav-menu d-flex flex-row flex">
+  <!-- <i class="bi bi-list mobile-nav-toggle d-lg-none"></i> -->
+  <nav id="navbar" class="navbar nav-menu ">
     <a href="#hero" class="nav-link scrollto">
       <img 
       class="siege-logo"
@@ -51,7 +51,17 @@
       <a href="#contact" class="nav-link scrollto"><span>About</span></a>
       <a href="#contact" class="nav-link scrollto"><span>Contact</span></a>
       <a href="#hero" class="nav-link scrollto"><span>Blog</span></a>
-  </nav><!-- .nav-menu -->
+  </nav>
+
+  <div class="mobile-logo">
+    <a href="#hero" class="nav-link scrollto">
+      <img 
+      class="siege-logo"
+      src="https://res.cloudinary.com/dngvjrd0n/image/upload/v1717903164/portfolio/siegeailogo_wqiaun.png" 
+      alt="Siege Ai Logo"
+      >
+    </a>
+  </div>
                 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column flex-md-row justify-content-center">
@@ -62,13 +72,13 @@
       </h6>
       <h6>Forget the warehousing and ETLs.
       </h6>
-      <div class="d-flex flex-row gap-4">
-      <a class="mt-4" href="#plans">
-        <button type="button" class="btn btn-light hero-cta">Try It Free</button>
-        </a>
-      <a class="mt-4" href="#howitworks">
-          <button type="button" class="btn btn-light hero-cta2">Learn More</button>
-        </a>
+      <div class="d-flex flex-row gap-4 hero-buttons">
+         <a class="mt-4" href="#plans">
+           <button type="button" class="btn btn-light hero-cta">Try It Free</button>
+           </a>
+         <a class="mt-4" href="#howitworks">
+             <button type="button" class="btn btn-light hero-cta2">Learn More</button>
+           </a>
       </div>
     </div>
 
@@ -104,8 +114,10 @@
         </div>
       </div>
     </div>
-
-  </section><!-- End Hero -->
+    <a href="#howitworks" class="nav-link scrollto nav-down"><i class="bi bi-caret-down-fill"></i></a>  
+  </section>
+  
+  <!-- End Hero -->
 
   <main id="main">
     <!-- ======= How It Works Section ======= -->
@@ -113,7 +125,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Siege Enables</h2>
+          <h2>Siege Brings Forth</h2>
         </div>
 
     <!-- ======= Steps ======= -->
@@ -202,20 +214,24 @@
       <br/>
       <br/>
 
-      <div class="section-title">
-        <p class="magic">EASY TO DEPLOY, WORKS LIKE MAGIC!</p>
-
-        <h2>Drop it in... that's it!</h2>
-        <p>In just 10 minutes, empower your team with unprecedented insights into your product.</p>
-        <p> Unleash the potential to discover, debug, and enhance your product on the very same day!</p>
-      </div>
-      
-      <div class="col-lg-12 mx-auto siege-diagram">
-        <img src="https://res.cloudinary.com/dngvjrd0n/image/upload/v1717898743/portfolio/drop_it_in_s2vvuv.png" 
-        class="img-fluid" alt="" data-aos="fade-up">
-      </div>
-      </section>
+      <div class="container d-flex justify-content-center align-items-center flex-column">
+        <div class="section-title">
+          <p class="magic">EASY TO DEPLOY, WORKS LIKE MAGIC!</p>
+  
+          <h2>Drop it in... that's it!</h2>
+          <p>In just 10 minutes, empower your team with unprecedented insights into your product.
+            Unleash the potential to discover, debug, and enhance your product on the very same day!
+          </p>
+        </div>
         
+        <div class="col-lg-12 mx-auto siege-diagram">
+          <img src="https://res.cloudinary.com/dngvjrd0n/image/upload/v1717898743/portfolio/drop_it_in_s2vvuv.png" 
+          class="img-fluid" alt="" data-aos="fade-up">
+        </div>
+      <a href="#plans" class="nav-link scrollto nav-down"><i class="bi bi-caret-down-fill"></i></a>  
+      </div>
+
+      </section>
         
         <br/>
         <br/>
