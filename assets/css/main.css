@@ -409,6 +409,12 @@ h6 {
   }
 }
 
+@media (orientation: portrait) {
+  .hero-copy {
+    padding: 4rem 1.5rem 0 1.5rem;
+  }
+} 
+
 .hero-copy h4{
   font-family: JetBrains Mono;
   background: linear-gradient(90deg, rgb(255, 0, 111) 5%,  rgb(0, 128, 255) 100%);
@@ -417,7 +423,7 @@ h6 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 400;
-}
+} 
 
 .hero-copy h6{
   color: #aab0b6;
@@ -915,6 +921,10 @@ position: relative;
   height: 36vh;
 }
 
+@media (orientation: portrait) {
+  .stepcard { height: 40vh; } 
+}
+
 .card {
   color: #fff;
   margin: 40px auto;
@@ -990,6 +1000,12 @@ position: relative;
   padding: 1.5rem 4rem;
   border-radius: 6rem;
   margin-top: 2rem;
+}
+
+@media (orientation: portrait) {
+  .plan-cta{
+    font-size: 14px;
+  }
 }
 
 .plan-cta:hover{
