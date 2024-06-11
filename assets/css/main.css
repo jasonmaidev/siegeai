@@ -372,7 +372,7 @@ h6 {
 
   #hero:before {
     content: "";
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     top: 0;
     left: 0;
@@ -921,9 +921,36 @@ position: relative;
   height: 36vh;
 }
 
-@media (orientation: portrait) {
-  .stepcard { height: 40vh; } 
-}
+.stepcard {
+    @media (min-width: 3400px) {
+     height: 20vh;
+    }
+    @media (min-width: 4800px) {
+      height: 20vh;
+    }
+    @media (max-width: 3300px) and (max-height: 1500px) {
+      height: 28vh;
+    }
+    @media (max-width: 2600px) and (min-height: 1400px) {
+      height: 18vh;
+    }
+    @media (max-width: 1600px) {
+      height: 40vh;
+    }
+    @media (max-width: 1500px) {
+      height: 40vh;
+    }
+    @media (max-width: 1400px) {
+      height: 40vh;
+    }
+    @media (max-width: 1100px) {
+      height: 40vh;
+    }
+  }
+
+  @media (orientation: portrait) {
+    .stepcard { height: 38vh; } 
+  }
 
 .card {
   color: #fff;
@@ -984,6 +1011,12 @@ position: relative;
 .plan-details{
   color: #aab0b6;
   padding-left: 2rem;
+}
+
+@media (orientation: portrait) {
+  .plan-details{
+    padding-left: 0;
+  }
 }
 
 .bx-check-circle{
@@ -1220,7 +1253,6 @@ opacity: 0.7;
 
 .contact .php-email-form {
   width: 100%;
-  /* background: #fff; */
 }
 
 .contact .php-email-form .form-group {
@@ -1305,6 +1337,104 @@ opacity: 0.7;
   100% {
     transform: rotate(360deg);
   }
+}
+
+.contact .php-email-form button[type="submit"] {
+  background-image: initial;
+  background: linear-gradient(45deg, #00a6ff 10%, #571aff 70%, #ff0066 120%);
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  color: rgb(222, 220, 217);
+  padding: 1.5rem 3rem;
+}
+
+.contact .php-email-form button[type="submit"]:hover{
+  background: linear-gradient(45deg, #0aefff 10%, #6e3aff 70%, #ff247c 100%);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color:#fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #1f2937;
+  background-clip: padding-box;
+  border: solid 1px #4a525c;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+  color:#fff;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #1f2937;
+  background-clip: padding-box;
+  border: solid 3px #00a6ff;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0.5rem;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .php-email-form input[type=email]::placeholder{
+  color: #667282;
+}
+
+.contact .php-email-form input[type=text]::placeholder{
+  color: #667282;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea::placeholder{
+  color: #667282;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.provision-container {
+  border-bottom: solid 1px #4a525c;
+  border-image: linear-gradient(to right,#1f2937, #667282, #1f2937) 1;
+  margin-bottom: 4rem;
+}
+
+.node-label {
+  color: #667282;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #667282;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #1f2937;
+  border: solid 1px #667282;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.contact .php-email-form input[type=text], .contact .php-email-form input[type=email] {
+  color: #fff;
 }
 /*--------------------------------------------------------------
 # Footer

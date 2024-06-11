@@ -39,7 +39,6 @@
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <i class="bi bi-list mobile-nav-toggle d-lg-none"></i> -->
   <nav id="navbar" class="navbar nav-menu ">
     <a href="#hero" class="nav-link scrollto">
       <img 
@@ -48,7 +47,7 @@
       alt="Siege Ai Logo"
       >
     </a>
-      <a href="#contact" class="nav-link scrollto"><span>About</span></a>
+      <a href="#howitworks" class="nav-link scrollto"><span>About</span></a>
       <a href="#contact" class="nav-link scrollto"><span>Contact</span></a>
       <a href="#hero" class="nav-link scrollto"><span>Blog</span></a>
   </nav>
@@ -252,9 +251,6 @@
       <div class="card-container col-12 col-md-6">
         <div 
           class="card card-size p-4 mb-0" 
-          data-aos="fade-right" 
-          data-aos-easing="ease-out-cubic" 
-          data-aos-duration="1000"
         >
           <div class="card-body pb-0">
             <h1 class="plan-title custom-card-title text-center pt-2">
@@ -314,9 +310,6 @@
       <div class="card-container col-12 col-md-6">
         <div 
           class="card card-size p-4 mb-0" 
-          data-aos="fade-left" 
-          data-aos-easing="ease-out-cubic" 
-          data-aos-duration="1000"
         >
           <div class="card-body pb-0">
             <h1 class="plan-title custom-card-title text-center pt-2">
@@ -381,42 +374,88 @@
     <section id="contact" class="contact py-2">
       <div class="container" data-aos="fade-up">
 
+        <!-- Provision Form -->
         <div class="section-title">
-          <h2>Get in Touch</h2>
+          <h2>Auto-provision your Siege cloud instance today in 1 easy step!</h2>
         </div>
 
-        <div class="row mt-1">
-
+        <div class="row mt-1 pb-5 provision-container">
           <div class="col-lg-6 offset-md-3 mt-5 mt-lg-0">
-
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Full Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Work Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subdomain" id="subdomain" placeholder="Siege Subdomain Name" required>
               </div>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>- Approx. Traffic Size -</option>
+                <option value="1">Less than 1000/min</option>
+                <option value="2">1000-10000/min</option>
+                <option value="3">10000-30000/min</option>
+                <option value="3">More than 100000/min</option>
+              </select>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <label for="node" class="node-label">How many nodes do you have?</label>
+                <input type="number" class="form-control" name="node" id="node" placeholder="How many nodes do you have?" required>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center">
+                <button type="submit" class="plan-cta">Create Instance <i class="bi bi-arrow-right"></i></button>
+              </div>
             </form>
-
           </div>
+        </div>
+        <!-- Provision Form End-->
 
+        <!-- Contact Form -->
+        <div class="section-title">
+          <h2>Get in Touch</h2>
         </div>
 
-        <div class="contact-info">
+        <div class="row mt-1">
+          <div class="col-lg-6 offset-md-3 mt-5 mt-lg-0">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="company" id="company" placeholder="Company Name (Optional)" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number (Optional)" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Tell us a little more about what you are looking for." required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="plan-cta">Send Message<i class="bi bi-arrow-right"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Contact Form End-->
+
+        <div class="contact-info p-4">
           <span>
             Made with ♥ in Los Angeles, CA
           </span>
